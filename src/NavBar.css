@@ -1,0 +1,12 @@
+.NavBar {
+    background-color: #1c1b1b;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.SiteTitle {
+    background-color: #1c1b1b;
+    color: #d9392e;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-size: 60px;
+}

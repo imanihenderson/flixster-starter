@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import MovieList from './MovieList';
-import SearchBar from './SearchBar';
+//import SearchBar from './SearchBar';
+import NavBar from './NavBar'
 
 
 const App = () => {
@@ -35,15 +36,15 @@ const App = () => {
   
   
   return (
-    <div className="App">
-      <SearchBar></SearchBar>
+    <section className="App">
+      <NavBar></NavBar>
       {myData.results.map(movie => (
         <MovieList movies={myData.results}
       />
       ))}
       
       
-    </div>
+    </section>
   )
 }
 

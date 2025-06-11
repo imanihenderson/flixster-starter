@@ -1,7 +1,7 @@
 .MovieCard {
     width: calc(15% - 20px);
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     height: 300px;
     box-shadow: 0px 4px 16px ;
@@ -12,7 +12,6 @@
     width: calc(100% - 0px);
     height: 180px;
     display: flex;
-    margin-bottom: 30px;
     align-items: center;
     border-radius: 8%;
 }
@@ -21,10 +20,13 @@
     font-size: 13px;
     text-align: center;
     color: #f5f0f0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .MovieTitle {
     font-size: 18px;
     text-align: center;
     color: #f5f0f0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
