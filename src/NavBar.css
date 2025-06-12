@@ -6,7 +6,25 @@
 .SiteTitle {
     background-color: #1c1b1b;
     color: #d9392e;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     margin-top: 0px;
-    font-size: 60px;
+    font-size: 80px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 5px;
+    text-shadow: 10px 8px 10px black;
+}
+
+.SortBy {
+    display: flex;
+    justify-content: right;
+    margin: 40px;
+    
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

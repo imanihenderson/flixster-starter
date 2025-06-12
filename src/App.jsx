@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import MovieList from "./MovieList";
-import SearchBar from "./SearchBar";
 import NavBar from "./NavBar";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [myData, setMyData] = useState({ results: [] });
+  const [customPage, setCustomPage] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
       console.log("inside fetch Data");
-      const url =
-        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+      const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${customPage}`;
       const options = {
         method: "GET",
         headers: {
@@ -24,13 +23,23 @@ const App = () => {
       try {
         const res = await fetch(url, options);
         const json = await res.json();
-        setMyData(json);
+
+        if (customPage === 1) {
+          // if first page, set the data as before
+          setMyData(json);
+        } else {
+          // if prev page append the new results to the existing ones
+          setMyData(prevData => ({
+            ...json,
+            results: [...prevData.results, ...json.results]
+          }));
+        }
       } catch (err) {
         console.error(err);
       }
     };
-    fetchData();
-  }, []);
+    fetchData(customPage);
+  }, [customPage]);
 
   // 1. create use search API fetch
 
@@ -68,13 +77,15 @@ const App = () => {
   };
 
 
-  
+
 
   const SortByAlpha = () => {
-    // creating new dataset in brackets to avoid altering main data
+    // creating new dataset in brackets to avoid altering
     const AlphaSorted = [...myData.results].sort((a, b) =>
       a.original_title.localeCompare(b.original_title)
     );
+    // creates new object with updated results propert, and assigns to myData
+    console.log('After sorting:', AlphaSorted)
     setMyData({ ...myData, results: AlphaSorted });
   };
 
@@ -87,10 +98,22 @@ const App = () => {
 
   const SortByVote = () => {
     const VoteSorted = [...myData.results].sort(
-      (a, b) => b.vote_average - a.vote_average // descending ordder 
+      (a, b) => b.vote_average - a.vote_average // descending order
     );
     setMyData({ ...myData, results: VoteSorted });
   };
+
+  //  updates page number 
+  const loadMore =() => {
+    if (customPage < myData.total_pages) {
+      setCustomPage((prevPage => prevPage + 1));
+    }
+
+
+
+
+
+  }
 
     return (
       <section className="App">
@@ -98,11 +121,16 @@ const App = () => {
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}
           onClear={handleClear}
-          alphaSort={SortByAlpha}
-          releaseSort={SortByRelease}
-          voteSort={SortByVote}
+          SortByAlpha={() => SortByAlpha()}
+          SortByRelease={() => SortByRelease()}
+          SortByVote={() => SortByVote()}
+          ResetPage={() => handleClear()}
         />
+        <button onClick={loadMore} disabled={customPage >= myData.total_pages} className="LoadButton">
+        Load More
+      </button>
         <MovieList movies={myData ? myData.results : []} />
+
       </section>
     );
   };

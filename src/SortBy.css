@@ -1,7 +1,16 @@
 .SortLabel {
-    font-size: 18px;
-    color: #f5f0f0;
+    font-size: 20px;
+    color: #d9392e;
     margin-right: 10px;
     
 
+}
+
+.Sort {
+    width: 200px;
+    height: 30px;
+    background-color: #4f4d4e;
+    border-radius: 10px;
+    border-color: #4f4d4e;
+    box-shadow: 0px 4px 16px ;
 }
