@@ -1,17 +1,16 @@
-import './MovieCard.css'
+import "./MovieCard.css";
 
-const MovieCard = ({Title, PosterImg, VoteAverage}) => {
-    const imgUrl = `https://image.tmdb.org/t/p/w500${PosterImg}`;
-    return (
-        <section className="MovieCard">
-            <h2 className="MovieTitle">{Title}</h2>
-            <img src={imgUrl} alt={Title} className="PosterImg"/>
-            <div className="movie-info">
-            <h3 className="VoteAverage">{VoteAverage}</h3>
-            </div>
-        </section>
-    )
-}
-
+const MovieCard = ({ Title, PosterImg, VoteAverage }) => {
+  const imgUrl = `https://image.tmdb.org/t/p/w500${PosterImg}`;
+  return (
+    <section className="MovieCard">
+      <h2 className="MovieTitle">{Title}</h2>
+      <img src={imgUrl} alt={Title} className="PosterImg" />
+      <div className="movie-info">
+        <h3 className="VoteAverage">{VoteAverage}</h3>
+      </div>
+    </section>
+  );
+};
 
 export default MovieCard;
