@@ -40,13 +40,13 @@ Deployed Application (**required**): [Flixster Deployed Site](ADD_LINK_HERE)
   - [x] Users can click on a movie tile to view more details about a movie in a pop-up modal.
     - [x] The pop-up window is centered in the screen and does not occupy the entire screen.
     - [x] The pop-up window has a shadow to show that it is a pop-up and appears floating on the screen.
-    - [ ] The backdrop of the pop-up appears darker or in a different shade than before. including:
-    - [ ] The pop-up displays additional details about the moving including:
-      - [ ] Runtime in minutes
+    - [x] The backdrop of the pop-up appears darker or in a different shade than before. including:
+    - [x] The pop-up displays additional details about the moving including:
+      - [x] Runtime in minutes
       - [x] Backdrop poster
-      - [ ] Release date
-      - [ ] Genres
-      - [ ] An overview
+      - [x] Release date
+      - [x] Genres
+      - [x] An overview
   - [x] Users can use a drop-down menu to sort movies.
     - [x] Drop-down allows movies to be sorted by:
       - [x] Title (alphabetic, A-Z)
@@ -55,12 +55,12 @@ Deployed Application (**required**): [Flixster Deployed Site](ADD_LINK_HERE)
     - [x] When a sort option is clicked, movies display in a grid according to selected criterion.
   - [ ] Website displays:
     - [x] Header section
-    - [ ] Banner section
+    - [x] Banner section
     - [x] Search bar
     - [x] Movie grid
-    - [ ] Footer section
+    - [x] Footer section
     - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it. 
-  - [ ] **Deployment**
+  - [x] **Deployment**
   - [x] Website is deployed via Render.
   - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough. 
 

@@ -13,13 +13,18 @@ const Modal = ({ Title, VoteAverage, onClose, PosterImg, Release, Genre, Overvie
         <p className="ReleaseDate">Release Date: {Release}</p>
         <p className="Genre">Genre: {Genre}</p>
         <p className="Overview"> Overview: {Overview}</p>
-        {/* {trailerKey && ( */}
-            <iframe src={trailerUrl} className="movie-videos"
-        
-        />
+        {trailerKey ? (
+          <iframe
+            src={trailerUrl}
+            className="movie-videos"
+            title={`${Title} trailer`}
+            allowFullScreen
+            style={{ border: 0 }}
+          />
+        ) : (
+          <p>No trailer available</p>
+        )}
 
-        {/* // )} */}
-        
       </section>
     </section>
   );

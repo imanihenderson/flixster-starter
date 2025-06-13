@@ -2,7 +2,7 @@ import "./MovieCard.css";
 import Modal from "./Modal.jsx";
 import { useState } from "react";
 
-const MovieCard = ({ Title, PosterImg, VoteAverage, Videos, Overview, Release, Genre, trailerKey }) => {
+const MovieCard = ({ Title, PosterImg, VoteAverage, Overview, Release, Genre, trailerKey }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
   const [isWatched, setIsWatched] = useState(false);

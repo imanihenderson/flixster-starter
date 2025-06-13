@@ -50,10 +50,9 @@ const App = () => {
     const handleSearch = async () => {
       // search api call
       console.log("Grabbing search data");
-      // const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(
-      //   searchTerm
-      // )}&include_adult=false&language=en-US&primary_release_year=2025&page=1&year=2025';`;
-      const url = 'https://api.themoviedb.org/3/movie/movie_id?language=en-US';
+      const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(
+        searchTerm
+      )}&include_adult=false&language=en-US&page=1`;
       const options = {
         method: "GET",
         headers: {
@@ -105,7 +104,7 @@ const App = () => {
     setMyData({ ...myData, results: VoteSorted });
   };
 
-  //  updates page number 
+  //  updates page number
   const loadMore =() => {
     if (customPage < myData.total_pages) {
       setCustomPage((prevPage => prevPage + 1));
@@ -128,7 +127,7 @@ const App = () => {
           SortByVote={() => SortByVote()}
           ResetPage={() => handleClear()}
         />
-        
+
         <MovieList movies={myData ? myData.results : []} />
         <section className="Footer">
           <button onClick={loadMore} disabled={customPage >= myData.total_pages} className="LoadButton">

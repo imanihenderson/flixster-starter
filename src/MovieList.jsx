@@ -7,7 +7,7 @@ const MovieList = ({ movies }) => {
 
   useEffect(() => {
     const getVideos = async () => {
-        const newVideos = {} // set each movie id to their videos 
+        const newVideos = {} // set each movie id to their videos
         await Promise.all(
             movies.map(async (movie) => {
             const url = `https://api.themoviedb.org/3/movie/${movie.id}/videos?language=en-US`;
@@ -22,15 +22,19 @@ const MovieList = ({ movies }) => {
                 const res = await fetch(url, options);
                 const json = await res.json();
                 const trailer = json.results.find(
-                    (vid) => vid.type === "Trailer" && vid.site === "Youtube"
-                );
+                    (vid) =>
+                            vid.type === "Trailer" && vid.site === "YouTube"
+
+            );
                 newVideos[movie.id] = trailer?.key || null;
-            
+                console.log(json)
+
             } catch (err) {
                 console.error(err);
-            // }
+            }
             })
         );
+
         setVideoData(newVideos);
         };
         getVideos();

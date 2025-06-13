@@ -76,3 +76,8 @@
     color: #f5f0f0;
     font-size: 15px;
 }
+
+.movie-videos {
+    width: 300px;
+    height: auto;
+}
