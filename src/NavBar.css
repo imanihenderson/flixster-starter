@@ -19,7 +19,8 @@
 .SortBy {
     display: flex;
     justify-content: right;
-    margin: 40px;
+    /* margin: 40px; */
+    padding: 30px;
     
 }
 
@@ -27,4 +28,10 @@
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.SortHolder {
+    height: 90px;
+    margin-bottom: 45px;
+    background-color: black;
 }

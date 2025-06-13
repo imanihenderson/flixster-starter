@@ -2,11 +2,12 @@ import "./MovieCard.css";
 import Modal from "./Modal.jsx";
 import { useState } from "react";
 
-const MovieCard = ({ Title, PosterImg, VoteAverage, Videos }) => {
+const MovieCard = ({ Title, PosterImg, VoteAverage, Videos, Overview, Release, Genre, trailerKey }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
   const [isWatched, setIsWatched] = useState(false);
   const imgUrl = `https://image.tmdb.org/t/p/w500${PosterImg}`;
+  const trailerUrl= `https://www.youtube.com/embed/${trailerKey}`;
 
   const handleOpen = () => setIsModalOpen(true);
   const handleClose = () => setIsModalOpen(false);
@@ -41,7 +42,10 @@ const MovieCard = ({ Title, PosterImg, VoteAverage, Videos }) => {
             Title={Title}
             VoteAverage={VoteAverage}
             onClose={handleClose}
-            Videos={Videos}
+            trailerKey={trailerKey}
+            Overview={Overview}
+            Release={Release}
+            Genre={Genre}
 
 
         />

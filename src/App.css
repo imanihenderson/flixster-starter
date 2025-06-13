@@ -4,7 +4,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,4 +33,9 @@
     border-radius: 10px;
     margin-bottom: 10px;
     color: #d9392e;
+}
+
+.Footer {
+  background-color:#d9392e;
+  padding: 50px;
 }

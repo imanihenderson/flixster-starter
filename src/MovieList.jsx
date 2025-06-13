@@ -21,10 +21,14 @@ const MovieList = ({ movies }) => {
             try {
                 const res = await fetch(url, options);
                 const json = await res.json();
-                newVideos[movie.id] = json.results;
+                const trailer = json.results.find(
+                    (vid) => vid.type === "Trailer" && vid.site === "Youtube"
+                );
+                newVideos[movie.id] = trailer?.key || null;
+            
             } catch (err) {
                 console.error(err);
-            }
+            // }
             })
         );
         setVideoData(newVideos);
@@ -40,7 +44,11 @@ const MovieList = ({ movies }) => {
           Title={movie.original_title}
           PosterImg={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           VoteAverage={movie.vote_average}
-          Videos={videoData[movie.id]}
+          Overview={movie.overview}
+          Release={movie.release_date}
+          Genre={movie.genre_ids}
+          trailerKey={videoData[movie.id]}
+
         />
       ))}
     </section>

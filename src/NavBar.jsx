@@ -5,7 +5,9 @@ import SortBy from "./SortBy";
 const NavBar = ({ searchTerm, setSearchTerm, onClear, SortByAlpha, SortByRelease, SortByVote, ResetPage }) => {
   return (
     <nav className="NavBar">
-        <SortBy
+        <section className="SortHolder">
+
+            <SortBy
         className="SortBy"
         SortByAlpha={SortByAlpha}
         SortByRelease={SortByRelease}
@@ -13,6 +15,8 @@ const NavBar = ({ searchTerm, setSearchTerm, onClear, SortByAlpha, SortByRelease
         ResetPage={ResetPage}
 
       />
+        </section>
+
       <h1 className="SiteTitle">Flixster</h1>
       <SearchBar
         searchTerm={searchTerm}

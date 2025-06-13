@@ -23,6 +23,7 @@ const App = () => {
       try {
         const res = await fetch(url, options);
         const json = await res.json();
+        console.log(json.results)
 
         if (customPage === 1) {
           // if first page, set the data as before
@@ -49,9 +50,10 @@ const App = () => {
     const handleSearch = async () => {
       // search api call
       console.log("Grabbing search data");
-      const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(
-        searchTerm
-      )}&include_adult=false&language=en-US&primary_release_year=2025&page=1&year=2025';`;
+      // const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(
+      //   searchTerm
+      // )}&include_adult=false&language=en-US&primary_release_year=2025&page=1&year=2025';`;
+      const url = 'https://api.themoviedb.org/3/movie/movie_id?language=en-US';
       const options = {
         method: "GET",
         headers: {
@@ -126,10 +128,14 @@ const App = () => {
           SortByVote={() => SortByVote()}
           ResetPage={() => handleClear()}
         />
-        <button onClick={loadMore} disabled={customPage >= myData.total_pages} className="LoadButton">
-        Load More
-      </button>
+        
         <MovieList movies={myData ? myData.results : []} />
+        <section className="Footer">
+          <button onClick={loadMore} disabled={customPage >= myData.total_pages} className="LoadButton">
+        Load More
+          </button>
+
+        </section>
 
       </section>
     );
