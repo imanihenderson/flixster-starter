@@ -1,27 +1,24 @@
 .InputBar {
-    width: 300px;
-    height: 30px;
-    margin-bottom: 50px;
-    border-radius: 10px;
-    margin-right: 10px;
-    background-color:#4f4d4e;
-    border-color:#4f4d4e;
-    box-shadow: 0px 4px 16px ;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  margin-right: 10px;
+  background-color: #4f4d4e;
+  border-color: #4f4d4e;
+  box-shadow: 0px 4px 16px;
 }
 
 .SearchButton {
-    height: 36px;
-    border-radius: 10px;
-    margin: 5px;
-    color: #d9392e;
-    
-
+  height: 36px;
+  border-radius: 10px;
+  margin: 5px;
+  color: #d9392e;
 }
 
 .ClearButton {
-    height: 36px;
-    border-radius: 10px;
-    margin: 2.5px;
-    color: #d9392e;
-
+  height: 36px;
+  border-radius: 10px;
+  margin: 2.5px;
+  color: #d9392e;
 }

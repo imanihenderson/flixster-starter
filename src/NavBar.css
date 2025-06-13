@@ -1,27 +1,27 @@
 .NavBar {
-    background-color: #1c1b1b;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #1c1b1b;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .SiteTitle {
-    background-color: #1c1b1b;
-    color: #d9392e;
-    margin-bottom: 30px;
-    margin-top: 0px;
-    font-size: 80px;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    letter-spacing: 5px;
-    text-shadow: 10px 8px 10px black;
+  background-color: #1c1b1b;
+  color: #d9392e;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  font-size: 80px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 5px;
+  text-shadow: 10px 8px 10px black;
 }
 
 .SortBy {
-    display: flex;
-    justify-content: right;
-    /* margin: 40px; */
-    padding: 30px;
-    
+  display: flex;
+  justify-content: right;
+  /* margin: 40px; */
+  padding: 30px;
 }
 
 .bebas-neue-regular {
@@ -31,7 +31,7 @@
 }
 
 .SortHolder {
-    height: 90px;
-    margin-bottom: 45px;
-    background-color: black;
+  height: 90px;
+  margin-bottom: 45px;
+  background-color: black;
 }

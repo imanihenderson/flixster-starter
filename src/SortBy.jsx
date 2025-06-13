@@ -1,10 +1,8 @@
-import "./SortBy.css"
+import "./SortBy.css";
 
 const SortBy = ({ SortByAlpha, SortByRelease, SortByVote, ResetPage }) => {
-    const handleSortChange = (e) => {
-        const value = e.target.value;
-
-
+  const handleSortChange = (e) => {
+    const value = e.target.value;
 
     if (value === "alphabetic") {
       SortByAlpha();
@@ -12,15 +10,16 @@ const SortBy = ({ SortByAlpha, SortByRelease, SortByVote, ResetPage }) => {
       SortByRelease();
     } else if (value === "voteAverage") {
       SortByVote();
+    } else if (value === "Default") {
+      ResetPage();
     }
-      else if (value === "Default") {
-        ResetPage();
-      }
   };
 
   return (
     <section className="SortBy">
-      <label htmlFor="sort" className="SortLabel">Sort:</label>
+      <label htmlFor="sort" className="SortLabel">
+        Sort:
+      </label>
       <select className="Sort" name="sort" onChange={handleSortChange}>
         <option value="Default">Default</option>
         <option value="alphabetic">A-Z</option>

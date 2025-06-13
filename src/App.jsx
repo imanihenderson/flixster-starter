@@ -23,16 +23,16 @@ const App = () => {
       try {
         const res = await fetch(url, options);
         const json = await res.json();
-        console.log(json.results)
+        console.log(json.results);
 
         if (customPage === 1) {
           // if first page, set the data as before
           setMyData(json);
         } else {
           // if prev page append the new results to the existing ones
-          setMyData(prevData => ({
+          setMyData((prevData) => ({
             ...json,
-            results: [...prevData.results, ...json.results]
+            results: [...prevData.results, ...json.results],
           }));
         }
       } catch (err) {
@@ -77,16 +77,13 @@ const App = () => {
     window.location.reload();
   };
 
-
-
-
   const SortByAlpha = () => {
     // creating new dataset in brackets to avoid altering
     const AlphaSorted = [...myData.results].sort((a, b) =>
       a.original_title.localeCompare(b.original_title)
     );
     // creates new object with updated results propert, and assigns to myData
-    console.log('After sorting:', AlphaSorted)
+    console.log("After sorting:", AlphaSorted);
     setMyData({ ...myData, results: AlphaSorted });
   };
 
@@ -105,40 +102,36 @@ const App = () => {
   };
 
   //  updates page number
-  const loadMore =() => {
+  const loadMore = () => {
     if (customPage < myData.total_pages) {
-      setCustomPage((prevPage => prevPage + 1));
+      setCustomPage((prevPage) => prevPage + 1);
     }
-
-
-
-
-
-  }
-
-    return (
-      <section className="App">
-        <NavBar
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          onClear={handleClear}
-          SortByAlpha={() => SortByAlpha()}
-          SortByRelease={() => SortByRelease()}
-          SortByVote={() => SortByVote()}
-          ResetPage={() => handleClear()}
-        />
-
-        <MovieList movies={myData ? myData.results : []} />
-        <section className="Footer">
-          <button onClick={loadMore} disabled={customPage >= myData.total_pages} className="LoadButton">
-        Load More
-          </button>
-
-        </section>
-
-      </section>
-    );
   };
 
+  return (
+    <section className="App">
+      <NavBar
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        onClear={handleClear}
+        SortByAlpha={() => SortByAlpha()}
+        SortByRelease={() => SortByRelease()}
+        SortByVote={() => SortByVote()}
+        ResetPage={() => handleClear()}
+      />
+
+      <MovieList movies={myData ? myData.results : []} />
+      <section className="Footer">
+        <button
+          onClick={loadMore}
+          disabled={customPage >= myData.total_pages}
+          className="LoadButton"
+        >
+          Load More
+        </button>
+      </section>
+    </section>
+  );
+};
 
 export default App;

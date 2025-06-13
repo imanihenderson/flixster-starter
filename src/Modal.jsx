@@ -1,11 +1,22 @@
 import "./Modal.css";
 
-const Modal = ({ Title, VoteAverage, onClose, PosterImg, Release, Genre, Overview, trailerKey}) => {
+const Modal = ({
+  Title,
+  VoteAverage,
+  onClose,
+  PosterImg,
+  Release,
+  Genre,
+  Overview,
+  trailerKey,
+}) => {
   const imgUrl = `https://image.tmdb.org/t/p/w500${PosterImg}`;
-  const trailerUrl= `https://www.youtube.com/embed/${trailerKey}`;
+  const trailerUrl = `https://www.youtube.com/embed/${trailerKey}`;
   return (
     <section className="modal-content">
-      <span className="close" onClick={onClose}>&times;</span>
+      <span className="close" onClick={onClose}>
+        &times;
+      </span>
       <section className="modal-body">
         <img src={imgUrl} alt={Title} className="ModalImg" />
         <h2 className="movie-titles">{Title}</h2>
@@ -24,7 +35,6 @@ const Modal = ({ Title, VoteAverage, onClose, PosterImg, Release, Genre, Overvie
         ) : (
           <p>No trailer available</p>
         )}
-
       </section>
     </section>
   );

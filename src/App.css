@@ -28,14 +28,14 @@
 }
 
 .LoadButton {
-    height: 50px;
-    width: 200px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    color: #d9392e;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #d9392e;
 }
 
 .Footer {
-  background-color:#d9392e;
+  background-color: #d9392e;
   padding: 50px;
 }

@@ -4,7 +4,7 @@ Submitted by: Imani
 
 Estimated time spent: 30 hours spent in total
 
-Deployed Application (**required**): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (**required**): [Flixster Deployed Site](https://flixster-starter-7ecn.onrender.com/)
 
 ### Application Features
 
@@ -59,17 +59,17 @@ Deployed Application (**required**): [Flixster Deployed Site](ADD_LINK_HERE)
     - [x] Search bar
     - [x] Movie grid
     - [x] Footer section
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it. 
+    - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it. 
   - [x] **Deployment**
   - [x] Website is deployed via Render.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough. 
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough. 
 
 #### STRETCH FEATURES
 
 
-- [ ] **Embedded Movie Trailers**
+- [x] **Embedded Movie Trailers**
   - [x] Within the pop-up modal displaying a movie's details, the movie trailer is viewable.
-    - [ ] When the trailer is clicked, users can play the movie trailer.
+    - [x] When the trailer is clicked, users can play the movie trailer.
 - [x] **Favorite Button**
   - [x] For each movie displayed, users can favorite the movie.
   - [x] There should be visual element (such as a heart icon) on each movie's tile to show whether or not the movie has been favorited.
@@ -100,23 +100,22 @@ Deployed Application (**required**): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
 
-`ADD_EMBEDDED_CODE_HERE`
+[`ADD_EMBEDDED_CODE_HERE`](https://www.loom.com/share/cab107f0a369489ebe715633de1b90c1?sid=2afa835c-d373-4a00-a3f3-2f4904628f09)
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+    -Yes, the topics this week gave me a pretty thorough explanation of the languages we used, React specifically. I felt a bit unprepared for the api calls, and the idea of useState.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+    -If I had more time, I definitely would have implemented the sidebar and more styling to my website, also more features for user-friendliness.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+    -Everything went well, except for the styling of my movie trailers, due to the amount of information within the modal, some of the videos did not fit as intended. 
 
 ### Open-source libraries used
 
@@ -125,3 +124,5 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+    -Michelle helped me a lot with implementing my video trailer functionality. I had a small bug that she helped a lot with debugging. 
